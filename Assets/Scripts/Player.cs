@@ -129,6 +129,7 @@ public class Player : MonoBehaviour
 
         if (weaponNum == 0)
         { //弾丸
+            /*
             // 弾の発射タイミングを管理するタイマーを更新する
             m_shotTimer += Time.deltaTime;
 
@@ -137,9 +138,10 @@ public class Player : MonoBehaviour
 
             // 弾の発射タイミングを管理するタイマーをリセットする
             m_shotTimer = 0;
-
-            ShootNWay(angle, m_shotAngleRange, m_shotSpeed, m_shotCount);
-
+            */
+            if (Input.GetMouseButtonDown(0)) {
+                ShootNWay(angle, m_shotAngleRange, m_shotSpeed, m_shotCount);
+            }
         }
         else if (weaponNum == 1)
         { //レーザー
